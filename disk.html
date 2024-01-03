@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<!--     
+    TO DO:
+    -> SSTF
+    -> SCAN
+    -> C-LOOK
+     -->
+    <div class="container">
+        <h1>Disk Scheduling Algorithm</h1>
+        <div class="form-container">
+            <div>
+                <label for="tracks">Track: </label>
+                <input type="number/text" id="tracks" placeholder="ex. 89 78 56 82">
+            </div>
+            <div>
+                <label for="head">Disk Head: </label>
+                <input type="number" id="head" placeholder="ex. 67">
+            </div>
+            <div>
+                <label for="max-track">Max Tracks: </label>
+                <input type="number" id="max-track" placeholder="ex. 200">
+            </div>
+            <div>
+                <label for="disk-schedule">Choose Disk Scheduling Algorithm: </label>
+                <select name="schedule" id="schedule">
+                    <option value="sstf">SSTF</option>
+                    <option value="scan">SCAN</option>
+                    <option value="c-look">C-LOOK</option>
+                </select>
+            </div>
+            <button id="simulate-button">Simulate</button>
+        </div>
+        <div class="graph-container">
+            <canvas id="myChart"></canvas>
+        </div>
+        <h1>Total Seek Time: <span id="seekTime"></span> </h1>
+    </div>
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
